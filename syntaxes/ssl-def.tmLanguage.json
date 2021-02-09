@@ -1,0 +1,39 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "S/SL",
+  "patterns": [
+    {
+      "name": "comment.block.ssl-def",
+      "begin": "(\\{)",
+      "beginCaptures": {
+        "1": {
+          "name": "punctuation.definition.comment.ssl-def"
+        }
+      },
+      "end": "(\\})",
+      "endCaptures": {
+        "1": {
+          "name": "punctuation.definition.comment.ssl-def"
+        }
+      }
+    },
+    {
+      "match": "[0-9]+",
+      "captures": {
+        "0": {
+          "name": "constant.numeric.number.ssl-def"
+        }
+      }
+    },
+    {
+      "match": ";",
+      "name": "punctuation.semicolon.ssl-def"
+    },
+    {
+      "match": "=",
+      "name": "keyword.operator.assignment.ssl-def"
+    }
+  ],
+  "repository": {},
+  "scopeName": "source.ssl-def"
+}

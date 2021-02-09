@@ -22,10 +22,19 @@
           "S/SL"
         ],
         "extensions": [
-          ".ssl",
+          ".ssl"
+        ],
+        "configuration": "./language-configuration-ssl.json"
+      },
+      {
+        "id": "ssl-def",
+        "aliases": [
+          "S/SL Defenition"
+        ],
+        "extensions": [
           ".def"
         ],
-        "configuration": "./language-configuration.json"
+        "configuration": "./language-configuration-def.json"
       }
     ],
     "grammars": [
@@ -33,6 +42,11 @@
         "language": "ssl",
         "scopeName": "source.ssl",
         "path": "./syntaxes/ssl.tmLanguage.json"
+      },
+      {
+        "language": "ssl-def",
+        "scopeName": "source.ssl-def",
+        "path": "./syntaxes/ssl-def.tmLanguage.json"
       }
     ]
   }
