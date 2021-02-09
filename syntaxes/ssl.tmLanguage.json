@@ -1,0 +1,178 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "S/SL",
+  "patterns": [
+    {
+      "name": "comment.line.ssl",
+      "match": "(%.*$)",
+      "captures": {
+        "1": {
+          "name": "punctuation.definition.comment.ssl"
+        }
+      }
+    },
+    {
+      "name": "string.quoted.single.ssl",
+      "begin": "'",
+      "end": "'",
+      "patterns": [
+        {
+          "name": "constant.character.escape.ssl",
+          "match": "\\\\."
+        }
+      ]
+    },
+    {
+      "include": "#brackets"
+    },
+    {
+      "match": "^\\s*([A-Za-z]+[A-Za-z0-9]*)\\s*(:)\\s*$",
+      "captures": {
+        "1": {
+          "name": "entity.name.function.ssl"
+        },
+        "2": {
+          "name": "punctuation.colon.ssl"
+        }
+      }
+    },
+    {
+      "match": "(type)\\s+([A-Za-z0-9]+)\\s*(:)",
+      "captures": {
+        "1": {
+          "name": "storage.type.type.ssl"
+        },
+        "2": {
+          "name": "entity.name.type.class.ssl"
+        },
+        "3": {
+          "name": "punctuation.colon.ssl"
+        }
+      }
+    },
+    {
+      "match": "(mechanism)\\s+([A-Za-z0-9]+)\\s*(:)",
+      "captures": {
+        "1": {
+          "name": "storage.type.mechanism.ssl"
+        },
+        "2": {
+          "name": "entity.name.type.mechanism.ssl"
+        },
+        "3": {
+          "name": "punctuation.colon.ssl"
+        }
+      }
+    },
+    {
+      "match": "(\\|)\\s*([A-Za-z0-9,\\s\\*]+)(:)",
+      "captures": {
+        "1": {
+          "name": "keyword.control.case.ssl"
+        },
+        "2": {
+          "name": "entity.name.label.ssl"
+        },
+        "3": {
+          "name": "punctuation.colon.ssl"
+        }
+      }
+    },
+    {
+      "match": "[0-9]+",
+      "captures": {
+        "0": {
+          "name": "constant.numeric.number.ssl"
+        }
+      }
+    },
+    {
+      "match": "(rules|end|input|output)",
+      "name": "keyword.label.other.ssl"
+    },
+    {
+      "match": ",",
+      "name": "punctuation.comma.ssl"
+    },
+    {
+      "match": ";",
+      "name": "punctuation.semicolon.ssl"
+    },
+    {
+      "match": ">>",
+      "name": "keyword.return.ssl"
+    },
+    {
+      "match": ">",
+      "name": "keyword.exit.ssl"
+    },
+    {
+      "match": "=",
+      "name": "keyword.operator.assignment.ssl"
+    }
+  ],
+  "repository": {
+    "brackets": {
+      "patterns": [
+        {
+          "begin": "\\(",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.section.begin.bracket.round.ssl"
+            }
+          },
+          "end": "\\)",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.section.end.bracket.round.ssl"
+            }
+          },
+          "patterns": [
+            {
+              "include": "$self"
+            }
+          ]
+        },
+        {
+          "begin": "\\[",
+          "beginCaptures": {
+            "0": {
+              "name": "keyword.control.begin.switch.ssl"
+            }
+          },
+          "end": "\\]",
+          "endCaptures": {
+            "0": {
+              "name": "keyword.control.end.switch.ssl"
+            }
+          },
+          "patterns": [
+            {
+              "include": "$self"
+            }
+          ]
+        },
+        {
+          "begin": "\\{",
+          "beginCaptures": {
+            "0": {
+              "name": "keyword.control.begin.while.ssl"
+            }
+          },
+          "end": "\\}",
+          "endCaptures": {
+            "0": {
+              "name": "keyword.control.end.while.ssl"
+            }
+          },
+          "patterns": [
+            {
+              "include": "$self"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "scopeName": "source.ssl"
+}
