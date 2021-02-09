@@ -21,4 +21,15 @@ Initial release of S/SL language support
 ### 1.0.1
 
 Add `.def` support
+
 Add basic icon
+
+### 1.0.2
+
+Add support for functions
+
+Change token type of '\*' to represent control
+
+Add support for '?' character
+
+Clean up some missed tokens

@@ -2,7 +2,7 @@
   "name": "ssl-syntax-support",
   "displayName": "S/SL Syntax Support",
   "description": "Syntax support the the S/SL language",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "engines": {
     "vscode": "^1.53.0"
   },
