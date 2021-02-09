@@ -26,7 +26,7 @@
       "include": "#brackets"
     },
     {
-      "match": "^\\s*([A-Za-z]+[A-Za-z0-9]*)\\s*(:)\\s*$",
+      "match": "\\b([A-Za-z]+[\\w]*)\\s*(:)\\s*$",
       "captures": {
         "1": {
           "name": "entity.name.function.ssl"
@@ -37,35 +37,29 @@
       }
     },
     {
-      "match": "(type)\\s+([A-Za-z0-9]+)\\s*(:)",
+      "match": "\\b(type)\\s+([\\w]+)\\b",
       "captures": {
         "1": {
           "name": "storage.type.type.ssl"
         },
         "2": {
           "name": "entity.name.type.class.ssl"
-        },
-        "3": {
-          "name": "punctuation.colon.ssl"
         }
       }
     },
     {
-      "match": "(mechanism)\\s+([A-Za-z0-9]+)\\s*(:)",
+      "match": "\\b(mechanism)\\s+([\\w]+)\\b",
       "captures": {
         "1": {
           "name": "storage.type.mechanism.ssl"
         },
         "2": {
           "name": "entity.name.type.mechanism.ssl"
-        },
-        "3": {
-          "name": "punctuation.colon.ssl"
         }
       }
     },
     {
-      "match": "(\\|)\\s*([A-Za-z0-9,\\s]+)+\\s*(:)",
+      "match": "(\\|)\\s*([\\w,\\s]+)+\\s*(:)",
       "captures": {
         "1": {
           "name": "keyword.control.case.ssl"
@@ -79,15 +73,15 @@
       }
     },
     {
-      "match": "@[A-Za-z0-9]+",
+      "match": "@[\\w]+\\b",
       "name": "entity.name.function.ssl"
     },
     {
-      "match": "#[A-Za-z0-9]+",
+      "match": "#[\\w]+\\b",
       "name": "entity.name.function.ssl"
     },
     {
-      "match": "[0-9]+",
+      "match": "\\b[0-9]+\\b",
       "captures": {
         "0": {
           "name": "constant.numeric.number.ssl"
@@ -95,7 +89,7 @@
       }
     },
     {
-      "match": "(rules|end|input|output)",
+      "match": "\\b(rules|end|input|output)\\b",
       "name": "keyword.label.other.ssl"
     },
     {
@@ -154,6 +148,10 @@
           "patterns": [
             {
               "include": "$self"
+            },
+            {
+              "match": "\\w*",
+              "name": "variable.parameter"
             }
           ]
         },

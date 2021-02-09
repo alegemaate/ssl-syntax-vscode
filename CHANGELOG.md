@@ -22,3 +22,11 @@ Change token type of '\*' to represent control
 Add support for '?' character
 
 Clean up some missed tokens
+
+### 1.0.3
+
+Add support for function parameters
+
+Use word bounds to ensure proper matching on tokens and numbers
+
+Simplify regex
