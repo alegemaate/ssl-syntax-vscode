@@ -2,18 +2,20 @@
   "name": "ssl-syntax-support",
   "displayName": "S/SL Syntax Support",
   "description": "Syntax support the the S/SL language",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": {
     "vscode": "^1.53.0"
   },
   "categories": [
     "Programming Languages"
   ],
-  "publisher": "AllanLegemaate",
+  "preview": true,
+  "publisher": "alegemaate",
   "repository": {
     "type": "git",
     "url": "https://github.com/alegemaate/ssl-syntax-vscode"
   },
+  "icon": "./images/ssl.png",
   "contributes": {
     "languages": [
       {

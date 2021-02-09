@@ -17,3 +17,8 @@ None!
 ### 1.0.0
 
 Initial release of S/SL language support
+
+### 1.0.1
+
+Add `.def` support
+Add basic icon
