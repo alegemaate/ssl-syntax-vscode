@@ -1,15 +1,15 @@
 {
-  "name": "ssl-syntax-support",
+  "name": "ssl-syntax-vscode",
   "displayName": "S/SL Syntax Support",
   "description": "Syntax support the the S/SL language",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "engines": {
     "vscode": "^1.53.0"
   },
   "categories": [
     "Programming Languages"
   ],
-  "preview": true,
+  "preview": false,
   "publisher": "alegemaate",
   "repository": {
     "type": "git",

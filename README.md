@@ -41,3 +41,14 @@ Add support for function parameters
 Use word bounds to ensure proper matching on tokens and numbers
 
 Simplify regex
+
+### 1.0.4
+
+Fix syntax highlighting for functions followed by comments
+
+## Testing Locally
+
+- Make sure the language configuration settings in `language-configuration.json` are accurate.
+- Press `F5` to open a new window with your extension loaded.
+- Create a new file with a file name suffix matching your language.
+- Verify that syntax highlighting works and that the language configuration settings are working.
